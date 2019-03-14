@@ -1,0 +1,31 @@
+{"intents": [
+	{
+		"tag": "greeting",
+		"patterns": ["hi", "how are you", "is anyone there", "hello", "good day", "hey"],
+		"responses": ["Hello, nice to talk to you", "Good to talk to you again", "Hi there, how can I help you?"]
+	},
+	{
+		"tag": "goodbye",
+		"patterns": ["bye", "see you later", "goodbye"],
+		"responses": ["See you later", "thanks for asking", "Have a nice day", "Bye! Come back again soon"]
+	},
+	{
+		"tag": "thanks",
+		"patterns": ["thanks", "thank you", "that's helpful"],
+		"responses": ["Happy to help!", "Any time!", "My pleasure"]
+	}
+],
+"rules": [
+	{
+		"tag": "topN",
+		"patterns": ["What are the top N hotels "],
+		"responses": ["We operate only in LA, for now."]
+	},
+	{
+		"tag": "review",
+		"patterns": ["What are the reviews for "],
+		"responses": ["The review: "]
+	}	
+	]
+	
+}
