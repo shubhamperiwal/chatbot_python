@@ -18,14 +18,25 @@
 "rules": [
 	{
 		"tag": "topN",
-		"patterns": ["What are the top N hotels "],
-		"responses": ["We operate only in LA, for now."]
+		"patterns": "What are the top (.*) hotels (.*)",
+		"responses": ["The Top {1} hotels {0} are: "]
 	},
 	{
 		"tag": "review",
-		"patterns": ["What are the reviews for "],
-		"responses": ["The review: "]
-	}	
+		"patterns": "What (is|are) the (review|reviews) for (.*)",
+		"responses": ["The review for {0}: "]
+	},
+    {
+		"tag": "amenities",
+		"patterns": "Does (Hotel|hotel) (.*) have good (.*)",
+		"responses": ["The review for {1}: "]
+	},
+	{
+		"tag": "best",
+		"patterns": "Which is the best (Hotel|hotel) (.*?)", 
+		"responses": ["The review for {0}: "]
+	}
+	
 	]
 	
 }
