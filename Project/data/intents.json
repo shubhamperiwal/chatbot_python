@@ -2,7 +2,7 @@
 	{
 		"tag": "greeting",
 		"patterns": ["hi", "how are you", "is anyone there", "hello", "good day", "hey"],
-		"responses": ["Hello, nice to talk to you", "Good to talk to you again", "Hi there, how can I help you?"]
+		"responses": ["Hello, nice to talk to you", "Hello, it is a pleasure to talk to you", "Hi there, how can I help you?"]
 	},
 	{
 		"tag": "goodbye",
@@ -18,22 +18,22 @@
 "rules": [
 	{
 		"tag": "topN",
-		"patterns": "What are the top (.*) hotels (.*)",
+		"patterns": "what (is|are) the top (.*) hotel (.*)",
 		"responses": ["The Top {1} hotels {0} are: "]
 	},
 	{
 		"tag": "review",
-		"patterns": "What (is|are) the (review|reviews) for (.*)",
+		"patterns": "what (is|are) the (review|reviews) for (.*)",
 		"responses": ["The review for {0}: "]
 	},
     {
 		"tag": "amenities",
-		"patterns": "Does (Hotel|hotel) (.*) have good (.*)",
+		"patterns": "doe (.*) have good (.*)",
 		"responses": ["The review for {1}: "]
 	},
 	{
 		"tag": "best",
-		"patterns": "Which is the best (Hotel|hotel) (.*?)", 
+		"patterns": "which is the best hotel (.*)", 
 		"responses": ["The review for {0}: "]
 	}
 	
