@@ -2,12 +2,12 @@
 	{
 		"tag": "greeting",
 		"patterns": ["hi", "how are you", "is anyone there", "hello", "good day", "hey"],
-		"responses": ["Hello, nice to talk to you", "Hello, it is a pleasure to talk to you", "Hi there, how can I help you?"]
+		"responses": ["Hello, my name is AirBot! It's a pleasure to talk to you. You can ask me whatever you want and when you're done, just say 'Bye'"]
 	},
 	{
 		"tag": "goodbye",
 		"patterns": ["bye", "see you later", "goodbye"],
-		"responses": ["See you later", "thanks for asking", "Have a nice day", "Bye! Come back again soon"]
+		"responses": ["See you later", "Enjoy your trip! Bye!", "It was a pleasure talking to you!", "Have a nice day", "Bye! Come back again soon"]
 	},
 	{
 		"tag": "thanks",
@@ -17,19 +17,24 @@
 ],
 "rules": [
 	{
-		"tag": "topN",
+		"tag": "topNWithCondition",
 		"patterns": "what (is|are) the top (.*) hotel (.*)",
 		"responses": ["The Top {1} hotels {0} are: "]
 	},
 	{
-		"tag": "review",
-		"patterns": "what (is|are) the (review|reviews) for (.*)",
+		"tag": "topN",
+		"patterns": "what (is|are) the top (.*) hotel",
+		"responses": ["The Top {0} hotels are: "]
+	},
+	{
+		"tag": "rating",
+		"patterns": "what (is|are) the rating for (.*)",
 		"responses": ["The review for {0}: "]
 	},
     {
 		"tag": "amenities",
 		"patterns": "doe (.*) have good (.*)",
-		"responses": ["The review for {1}: "]
+		"responses": ["The review for {1} in {0}: "]
 	},
 	{
 		"tag": "best",
