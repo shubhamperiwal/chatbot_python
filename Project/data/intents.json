@@ -28,8 +28,8 @@
 	},
 	{
 		"tag": "rating",
-		"patterns": "what (is|are) the rating for (.*)",
-		"responses": ["The review for {0}: "]
+		"patterns": "what (is|are) the rating of (.*)",
+		"responses": ["The rating of {0}: "]
 	},
     {
 		"tag": "amenities",

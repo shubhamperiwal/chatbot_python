@@ -1,7 +1,3 @@
-
-# coding: utf-8
-
-# In[2]:
 import re, json
 import random
 import spacy 
@@ -10,6 +6,9 @@ import en_core_web_sm
 from nltk.stem import WordNetLemmatizer
 import nltk
 import pandas as pd
+# coding: utf-8
+
+
 class Chatbot(object):
 
     # In[3]:
@@ -189,6 +188,10 @@ class Chatbot(object):
             return df[df['name']==hotel][criteria].values[0]
 
 
+        def getHotelRating(hotel):
+            criteria='review_scores_rating'
+            return df[df['name']==hotel][criteria].values[0]
+
         # ## Create a dictionary of rules and get responses
 
         # In[17]:
@@ -256,6 +259,7 @@ class Chatbot(object):
             response = get_response_from_intent(intent)
         else:
             response, keywords, tag = match_rule(rules, clean_string, message)
+            print(tag, response)
             if(tag=="topN"):
                 if(len(keywords)==1):                
                     topKHotels = getTopKHotelsCriteria(df, int(keywords[0]))
@@ -265,7 +269,9 @@ class Chatbot(object):
             if(tag=="amenities"):
                 rating = getFeatureRating(keywords[1], keywords[0])
                 response = str("The rating for "+keywords[1]+" in terms of "+keywords[0]+" is "+str(rating))
-                
+            if(tag=="rating"):
+                rating = getHotelRating(keywords[0])
+                response = str("The rating for "+keywords[0]+" is "+str(rating))
         return response
 
 
@@ -274,7 +280,8 @@ class Chatbot(object):
     # # In[21]:
 
 
-    # message = "What are the top 5 hotels above $100 in Venice?"
+    # message = get_response("What is the rating of Venice Beach Cabana?")
+    # # message = "What are the top 5 hotels above $100 in Venice?"
     # # message = "Does Venice Beach Cabana have good ratings?"
     # # message = input()
     # response = get_response(message)
