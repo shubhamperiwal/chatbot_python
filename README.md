@@ -1,6 +1,13 @@
 # Chatbot 
 
-This repository contains my code to build a chatbot using Python
+This repository contains 2 folders: 
+1. Project
+  - Contains the code for a chatbot I developed using Python libraries like nltk, pandas, etc.
+2. TensorFlow
+  - Contains the code for a course I undertook on building chatbots using TensorFlow
+  
+  ## Project
+
 The chatbot aims to assist travellers answer questions about various AirBNBs in Los Angeles.
 
 You can ask questions like:
@@ -10,8 +17,8 @@ You can ask questions like:
 etc.
 
 To execute the code, just clone the repository and run "python app.py" 
-----------------
-Skills utilised:
+
+## Skills utilised:
 - Natural Language Understanding
 - Intent Detection
 - Named Entity Recognition
