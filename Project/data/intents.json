@@ -15,11 +15,21 @@
 		"responses": ["Happy to help!", "Any time!", "My pleasure"]
 	}
 ],
+
+
+
+
+
 "rules": [
 	{
 		"tag": "topNWithCondition",
 		"patterns": "what (is|are) the top (.*) hotel (.*)",
 		"responses": ["The Top {1} hotels {0} are: "]
+	},
+	{
+		"tag": "amenities",
+		"patterns": "doe (.*) have good (.*)",
+		"responses": ["The review for {1} in {0}: "]
 	},
 	{
 		"tag": "topN",
@@ -30,11 +40,6 @@
 		"tag": "rating",
 		"patterns": "what (is|are) the rating of (.*)",
 		"responses": ["The rating of {0}: "]
-	},
-    {
-		"tag": "amenities",
-		"patterns": "doe (.*) have good (.*)",
-		"responses": ["The review for {1} in {0}: "]
 	},
 	{
 		"tag": "best",

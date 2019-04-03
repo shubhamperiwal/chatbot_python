@@ -264,7 +264,7 @@ class Chatbot(object):
                     topKHotels = getTopKHotelsCriteria(df, int(keywords[0]))
                 else:
                     topKHotels = getTopKHotelsCriteria(df, int(keywords[1]), keywords[0]) 
-                response = "The best hotels for you are: "+listToString(topKHotels, sep=',')
+                response = "The best hotels for you are: \n"+listToString(topKHotels, sep=',')
             if(tag=="amenities"):
                 rating = getFeatureRating(keywords[1], keywords[0])
                 response = str("The rating for "+keywords[1]+" in terms of "+keywords[0]+" is "+str(rating))
